@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      // Step 1
+      //  1. 사용자는 총 3명의 캐릭터를 입력합니다 (prompt 활용);
+      //  1.1 입력된 사용자는 player 배열에 차곡차곡 담기게 된다.(push,for)
+      //  1.2 입력 후 콘솔창에 캐릭터 출력 해보세요.
+      var player = []
+      for(var i =0; i<3;i++){
+         var char = prompt("캐릭터를 입력해주세요~");
+         player.push(char);
+      }
+      console.log(player);
+
+      // player.forEach(function(data){
+      //    console.log("포이치문 데이터 : ", data)
+      // })
+
+      // Step 2
+      // 1. 사용자는 한명의 캐릭터를 선택합니다 ex) 이광수 입력
+      // 2. 사용자는 본인이 잡을 캐릭터를 선택합니다 ex) 김종국 입력
+      // 3. 입력후 선택 캐릭터, 잡을 캐릭터를 출력해 보세요
+      var mychar = prompt("캐릭터를 선택해주세요~");
+      var comchar = prompt("잡을 캐릭터를 선택해주세요~");
+      console.log("내가 선택한 캐릭터 :" , mychar);
+      console.log("내가 잡을 캐릭터는 : ", comchar);
+      
+      // Step 3
+      // 1. 내가 선택한 캐릭터의 인덱스값을 저장 후 출력 해보세요
+      // 2. 내가 잡을 캐릭터의 인덱스값을 저장 후 출력 해보세요
+      // 인덱스값 확인 = 배열.indexof("확인할 값");
+      var myindex = player.indexOf(mychar)
+      var comindex = player.indexOf(comchar)
+      console.log("내 인덱스", myindex);
+      console.log("컴 인덱스",comindex);
+
+      // Step 4
+      // 1. 내가 선택한 캐릭터의 인덱스값이 잡을 캐릭터의 인덱스보다 크면 콘솔창에 '잡을 캐릭터이름' 아웃 출력
+      // 2. 내가 선택한 캐릭터의 인덱스값이 잡을 캐릭터의 인덱스보다 작으면 콘솔창에 '내 캐릭터이름' 아웃 출력
+      // 3. 삼항연산자 활용하기! 조건 ? 참 : 거짓 (리턴받기!)
+      var result = myindex > comindex ? comchar : mychar;
+      
+      var res = ""
+      if(myindex > comindex){
+         res = comchar
+      }else{
+         res = mychar
+      }
+      console.log(result,"아웃!!")
+   </script>
+</body>
+</html>

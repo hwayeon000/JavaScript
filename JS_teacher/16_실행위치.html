@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <button onclick="alert('알림')">알림창!</button>
+   <script src="17_main.js"></script>
+   <script>
+      // 실행위치 
+      // 내부, 외부, 인라인
+      function text(){
+         console.log("안녕하세요~")
+      }
+      text()
+      
+      // 내부방식 = html코드안에 직접 작성하는 방식
+      // 단점 = 코드가 길어진다(가독성 떨어진다.) , 보안에 취약하다 , 재사용성 떨어진다(유지보수가 불편).
+
+      // 인라인방식 = 코드에 직접 기능을 작성하는 방식
+      // ex) <button onclick="alert('알림')">알림창!</button>
+      // 단점 = 코드가 노출, 재사용성이 없다, 간단한 하나의 이벤트를 처리할때 사용
+
+      // 외부방식 = html코드와 js코드를 분리
+      // 장점 = 코드가 노출되지 않는다, 코드의 재사용성이 좋다.
+      test()
+   </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 = 특정 기능들을 묶어서 호출 할 수 있게 해주는 방법
+        // 도미노 피자 만들기 
+
+        // 매번 만들려면 코드를 반복 작성 필요, 불편해!
+        // 피자 만드는 함수 만들기!
+        function makePizza(){
+            console.log("배달의 민족 주문!");
+            console.log("도우 셋팅");
+            console.log("토마토 소스 스윽스윽");
+            console.log("치즈 셋팅!");
+            console.log("페퍼로니 촵촵");
+            console.log("오븐에 굽기!");
+            console.log("배달 시작");
+        }
+
+        // 함수 실행시 호출이 필수!
+        // makePizza()
+
+
+        // 불고기 피자
+        function makePizza2(){
+            console.log("배달의 민족 주문!");
+            console.log("도우 셋팅");
+            console.log("토마토 소스 스윽스윽");
+            console.log("치즈 셋팅!");
+            console.log("불고기 촵촵");
+            console.log("오븐에 굽기!");
+            console.log("배달 시작");
+        }
+        
+        // 만약 주문하는 피자 여러개라면 함수 각각제작해도 상관은 없음
+        // 하지만 비효율적임!! 토핑의 종류만 변경하면 된다!!
+        // 이럴때 필요한 것이 매개변수
+
+        function makeAnyPizza(topping){
+
+            if(topping === "불고기"){
+                return "재료소진으로 품절입니다(ﾉ*Ф ωФ)ﾉ♧"
+            }
+            console.log("배달의 민족 주문!");
+            console.log("도우 셋팅");
+            console.log("토마토 소스 스윽스윽");
+            console.log("치즈 셋팅!");
+            console.log(topping + " 촵촵");
+            console.log("오븐에 굽기!");
+            console.log("배달 시작");
+            // 특정 값을 반환하는 경우 return
+            //return을 만난는 순간 함수 종료
+            return "별점 5개 부탁드립니다~╰(*°▽°*)╯~☆"
+        }
+
+        // let txt = makeAnyPizza("고르곤졸라")
+        // console.log(txt)
+
+        let txt1 = makeAnyPizza("불고기")
+        console.log(txt1)
+
+    </script>
+</body>
+</html>

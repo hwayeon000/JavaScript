@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 할 일 :  사용자에게 2개의 값을 입력받아 더한 값을 콘솔창에 출력
+        // step1
+        // 1. 사용자에게 2개의 값을 입력받고 각각 변수에 저장하세요. (prompt, 변수)
+        let tNum1 = prompt("숫자1를 입력해주세요~.");
+        let tNum2 = prompt("숫자2를 입력해주세요~.");
+
+        // 콘솔창에 더하기 연산 결과를 console창에 출력하시오.
+        console.log(tNum1 + tNum2);
+        // 빼기나 곱하기를 하는 경우 숫자의 경우 자동 인식으로 바꾸긴 함, 하지만 권장사항 아님..ㅎ, 컴터가 개발자가 멍충이네 내가 바꿔줄게..^^... 이럼..ㅎ
+        //표준안을 지키지 않으면 오류의 위험이 많다!
+
+        // 3. prompt의 리턴타입은 string -> number로 바꿔서 더하기
+        // let tNum1 = Number(prompt("숫자1를 입력해주세요~."));
+        // let tNum2 = Number(prompt("숫자2를 입력해주세요~."));
+        // 확장성이 있는 코드, 재사용 용이
+        let num1 = parseInt(tNum1);
+        let num2 = parseInt(tNum2);
+
+        console.log(num1 + num2);
+
+        
+
+    </script>
+</body>
+</html>

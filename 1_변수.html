@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // 숫자는 콘솔로 볼 경우 파랑, 문자열은 검정
+
+        // 변수 선언 방법에는 var or let(키워드) 변수명 = "값"
+        var num = 10;
+        var name = "정형쌤";
+        console.log("num 데이터 : ", num, ", name 데이터 : ", name);
+        var name = prompt("이름을 입력해주세요~.");
+        console.log("name 데이터 : ", name);
+            // 인터프리터 언어로 한 줄씩 실행하기 때문에 재 선언 가능
+            // 같은 변수 명이어도 실행이 됨..^^....... -> 단점 -> 옛날방식으로 권장하지 않음
+
+        // let 변수, 변수명의 중복이 되지 않는다. 권장사항
+        let age = 20;
+        // let age = 30;
+            //Uncaught SyntaxError: Identifier 'age' has already been declared : 이미 선언되었다 오류
+        age = 30;  // 재할당은 가능
+        console.log(age);
+
+
+            //함수 만들 떄 자주 사용
+        // const 상수, 중복 X, 재할당 X, 코틀린이 변수 var, 상수 val
+        const width = 100;
+
+    </script>
+</body>
+</html>

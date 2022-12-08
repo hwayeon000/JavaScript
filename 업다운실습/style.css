@@ -1,0 +1,28 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220630_211%2F1656578106549OQt7j_JPEG%2F019BBAD5-9654-4AA9-ABF8-5C1F6C99FA42.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#inner {
+  background-color: aliceblue;
+  display: flex;
+  width: 40%;
+  height: 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}

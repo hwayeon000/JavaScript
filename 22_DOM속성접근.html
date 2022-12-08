@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 인풋태그는 홀태그, 닫는 태그 없음, 값 value에 저장됨 -->
+    <input type="text" id="input_txt">
+    <button id="btn" onclick="input_val()">인풋 값 가져오기!</button>
+    <!-- 보안상 권장 사항은 아니나 인라인으로 사용해보자! -->
+    <br>
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMjNfMjUz%2FMDAxNjA2MTEzNTE5OTgz.9EpabtypH_rcE8tCjSUjqG42-jcWrJKWqEG0A00q3lkg.GYBTuD9NSQjPnYQh5fJvPbbVl0TFMFLv-A7zWLPWCuQg.JPEG.kim707401%2FIMG_0027.JPG&type=sc960_832" id="img">
+    <button id="btn_img" onclick="img_val()">이미지 경로 가지고 오기(✿◡‿◡)</button>
+
+    <script>
+
+        function input_val(){
+
+            // let val = document.getElementById("input_txt").innerHTML;
+            // console.log("인풋 값:", val);
+
+            //.innerHTML 이란 열린태그와 닫힌 태그 사이의 컴ㄴ텐츠를 가져오는 방법!
+            // 값이 출력 되지 않는 이유는 컨텐츠(내용)이 존재하지 않기 떄문에(★★value에 값이 저장)
+            let val2 = document.getElementById("input_txt").value;
+            console.log("진짜 인풋 값:", val2);
+
+        }
+
+        function img_val(){
+            // 속성을 가져오는 함수
+
+            // 이미지 태그의 src속성을 가져오기
+            // 원하는 속성 이름 작성, 'id'를 적으면 아이디 가져옴
+            // let src = document.getElementById("img").getAttribute("id");
+            let src = document.getElementById("img").getAttribute("src");
+
+            // let src = document.getElementById("img").src;
+            // 이것도 되는데 일단 약간 로직이 다르니 getAttribute로 가져오자
+
+            document.getElementById("img").setAttribute("src", "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMTRfMzEg%2FMDAxNjEzMjgyMzU0ODY4.QWdgJzezptjzE0o47Sxw7BsGBPufRrrHY7d01RaUw2Ug.JbVGwnLRuLAJ4dgq4GpR9PCogIOfkUCiSVWhd2jHe_og.JPEG.ysun0209%2FIMB_HxEgkT.jpg&type=sc960_832")
+            console.log("src 값:", src);
+
+        }
+
+
+    </script>
+</body>
+</html>

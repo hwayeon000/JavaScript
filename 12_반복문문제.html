@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Step1
+        // 플레이어가 상대방 이름, 횟수 총 2가지 값 입력받기, 각 변수에 저장
+        let name = prompt("이름을 입력하세요.");
+        let cnt = prompt("횟수를 입력하세요.");   
+
+        if (cnt<5) {
+            for(var i = 0; i < cnt; i++){  //cnt는 string이지만 자동 형변환 시켜준거임..^^...
+                console.log(name);
+            }
+        } else {
+            alert("플레이어 아웃");
+        }
+    </script>
+</body>
+</html>

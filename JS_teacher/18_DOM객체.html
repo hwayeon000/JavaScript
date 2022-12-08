@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+      <!-- 
+         DOM객체는 HTML의 모든 태그,속성,글자들을 각각 쪼개준다라고 생각
+         ex) <h1 id="h1tag">h1태그</h1> -> <h1>(태그), id(속성),h1tag(값),h1태그(내용)
+         쪼개는 이유는 각각 태그,속성,글자들에게 접근하기 위해서 나눠준다.
+      -->
+      <h1 id="h1tag">
+         <span>h1태그</span>
+      </h1>
+      <p class="ptag">문단태그</p>
+      <p class="ptag">문단태그</p>
+
+      <script>
+         // 할일 : id가 h1tag인 요소에게 접근 후, 그 안의 컨텐츠(내용)값 추출, 수정
+         // Step 1
+         // 1. 모든 html문서의 정보를 담고있는 주체에게 요청 = document
+         // 2. 명령문 작성(id가 h1tag인 요소를 가져와줘!) = get(가져오다) + element(요소를) + byid(아이디를 통해서)
+         // 3. document.getElementById("h1tag");
+         var h1tag = document.getElementById("h1tag");
+         console.log("가지고온 요소 : ", h1tag);
+
+         // Step2
+         // 1. 가지고온 h1요소에서 컨텐츠(내용)를 추출하기!
+         // 2. 명령문작성(요소안에 있는 html혹은text를 보여줘!)
+         var htmldata =  h1tag.innerHTML; //태그를 인식
+         var textdata = h1tag.innerText; // 태그를 인식하지 못한다.
+         console.log("innerHTML : ", htmldata);
+         console.log("innerText : ", textdata);
+
+         // Step3
+         // 1. 가지고온 h1요소에서 컨텐츠(내용)를 수정하기
+         h1tag.innerText = "<p>안녕하세요</p>";
+         
+         // 할일 : class가 ptag인 요소들을 가지고와서 컨텐츠(내용)를 추출,수정
+         // class는 중복이 되는 선택자 이기때문에, getElements복수개를 요청
+         // 복수개를 요청했기 때문에, 리턴하는 데이터 타입은 배열이랑 비슷(유사배열)
+         var ptag = document.getElementsByClassName("ptag")
+         console.log("가지고온 요소들 : ", ptag);
+
+         // 2. 컨텐츠를 추출
+         var text = ptag[0].innerHTML;
+         console.log("컨텐츠값 : ", text);
+      </script>
+</body>
+</html>

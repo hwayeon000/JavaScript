@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="text" id="input_txt">
+   <button id="btn" onclick="input_val()">인풋값 가지고오기!</button>
+   <br><br><br>
+   <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MDRfODUg%2FMDAxNjYyMjkzMDU3MTMx.mn7_vjWfQ7lO-CdA6VXpfqHS8kzQYWnEQv2B7jXuqucg.wwBfj4VcsHqSIDgrGVETyhc8BpVY_8JMsR43QaGEYW8g.PNG.ingangwoo%2F%25C1%25A6%25B8%25F1%25C0%25BB_%25C0%25D4%25B7%25C2%25C7%25CF%25BC%25BC%25BF%25E4_1.png&type=a340" id="img">
+   <button id="btn-img" onclick="img_val()">이미지경로 가지고오기!</button>
+
+
+
+   <script>
+      function input_val(){
+         var val = document.getElementById("input_txt").innerHTML;
+         console.log("인풋값 : ", val);
+         // 값이 출력되 않는 이유는 컨텐츠(내용)가 존재하지 않기때문에(value에 값이 저장)
+         var var2 = document.getElementById("input_txt").value;
+         console.log("진짜인풋값 : ",var2)
+      }
+
+      function img_val(){
+         // 이미지태그의 src속성을 가져오기!
+         var src = document.getElementById("img").getAttribute("src")
+         console.log("이미지 src : ", src);
+         document.getElementById("img").setAttribute("src","https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MDRfMjAg%2FMDAxNjYyMjkzMDU3MTM5.OP4LORzWjTMBwuH2CnrRKVzfxixIyqeutN9PKwb1zr0g.s20X80ABGEwSoBHAoW3V_Mw7tbUisxEkbLy9SflDuT4g.PNG.ingangwoo%2F%25C1%25A6%25B8%25F1%25C0%25BB_%25C0%25D4%25B7%25C2%25C7%25CF%25BC%25BC%25BF%25E4_2.png&type=a340")
+      }
+   </script>
+</body>
+</html>

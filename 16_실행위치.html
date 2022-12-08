@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 인라인 방식 -->
+    <button onclick="alert('쨔쟌')">알림창!</button>
+
+
+    <!-- 외부방식 스크립트 import -->
+    <script src="17_main.js"></script>
+
+    <script>
+        // 실행위치
+        // 내부, 외부, 인라인
+        function text(){
+            console.log("내부방식~");
+        }
+
+        text()
+
+
+        // 내부방식 = html코드 안에 직접 작성하는 방식, script태그 필요
+        // 단점 - 코드가 길어짐(가독성이 떨어짐), 보안에 취약, 
+            // 코드의 재사용,활용성이 떨어짐(유지보수가 불편)
+
+
+        // 인라인방식 = 코드에 직접 기능을 작성하는 방식
+        // 위의 버튼 알림창의 기능
+        // 단점 = 코드 노출, 재사용성이 없다, 간단한 하나의 이벤트를 처리할 때 사용
+
+
+        // ★★★외부방식★★★ = html코드와 JS코드 분리
+        // 장점 - 코드 노출되지 않음, 코드의 재사용성 좋다.
+        test();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        👍<span id="number">0</span>
+    </p>
+    <button id="like">좋아요(❁´◡`❁)</button>
+    <button id="hate">싫어요( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)</button>
+    <script>
+        // 해야할 일 :  좋아요, 싫어요 버튼을 눌렀을 때 span의 값이 1씩 증감하게 만드는 로직 작성
+
+        // Step 1
+        // like, hate 함수를 각각 생성 후, 각각 버튼에 이벤트 부여
+
+
+        // Step3
+         // 1. 좋아요 버튼을 클릭 시 span값을 1씩 증가
+         // 2. 싫어요 버튼을 클릭 시 span값을 1씩 감소
+         // 힌트★
+         // - innerhtml,innertext로 가지고온 컨텐츠는 문자형태!
+         // - 문자는 +,- 연산이 불가능 -> 숫자로 변경이 필요!
+
+        let span = document.getElementById("number");
+        let btn_1 = document.getElementById("like").addEventListener("click", like); 
+        let btn_2 = document.getElementById("hate").addEventListener("click", hate); 
+        let ptag = document.getElementsByTagName("p");
+
+
+        // var i = 1;
+        function like(){
+            span.innerText = ++(span.innerText);
+            // ++span.innerText; 
+            // span.innerText = Number(++i, span.innerText);   // -> var 같이 사용해야함
+            // span.innerText = Number(span.innerText)+1;
+        }
+
+        function hate(){
+            // span.innerText = parseInt(span.innerText) - 1; 
+            span.innerText--;
+        }
+
+
+    </script>
+</body>
+</html>

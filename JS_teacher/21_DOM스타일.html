@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   
+</head>
+<body>
+   <h1 id="txt"> DOM조작을 통한 CSS 수정</h1>
+   <button id="btn">스타일 변경!</button>
+
+   <script>
+      // 할일 : 버튼을 클릭시 h1태그의 스타일을 변경
+
+      function change(){
+         // 아이디가 txt요소를 가지고와서 스타일중에 글자색을 빨간색으로 변경할거야!
+         console.log("스타일속성 : ",document.getElementById("txt").style)
+         
+          document.getElementById("txt").style.color = "red";
+         // // 주의점! 모든 속성은 카멜케이스로 작성한다.
+          document.getElementById("txt").style.backgroundColor = "yellow";
+          
+      }
+      document.getElementById("btn").addEventListener("click",change);
+
+   </script>
+</body>
+</html>
